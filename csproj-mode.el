@@ -43,5 +43,13 @@
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.[^.]*proj\\'" . csproj-mode))
 
+(eval-after-load 'yasnippet
+  '(let ((snippet-dir (expand-file-name
+                       "snippets"
+                       (file-name-directory (or load-file-name (buffer-file-name))))))
+     (message snippet-dir)
+     (add-to-list 'yas-snippet-dirs snippet-dir t)
+     (yas-load-directory snippet-dir)))
+
 (provide 'csproj-mode)
 ;;; csproj-mode.el ends here

@@ -1,9 +1,34 @@
 csproj-mode
 ===========
 
-A major mode for Emacs for editing csproj (`.csproj`, `.vbproj`) and
-other msbuild project files (`*.*proj` files).
+An Emacs major mode for editing csproj (`.csproj`, `.vbproj`) and
+other msbuild-compatible project files (`*.*proj` files).
 
+Provides syntax highlighting, snippets and more!
+
+Installation
+------------
+
+Until this package gets added to a package repository, you can install
+the `csproj-mode.el` file directly by cloning this repository and
+using `package-install-file`.
+
+In your shell:
+
+    git clone https://github.com/omajid/csproj-mode
+
+In Emacs:
+
+    M-x package-install-file RET /path/to/csproj-mode.el
+
+
+Related Packages
+----------------
+
+If you are editing .NET Core projects,
+[`csharp-mode`](https://github.com/josteink/csharp-mode) and
+[`omnisharp`](https://github.com/OmniSharp/omnisharp-emacs) are very
+useful to have.
 
 License
 -------

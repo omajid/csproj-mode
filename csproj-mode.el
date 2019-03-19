@@ -5,7 +5,7 @@
 ;; Author: Omair Majid <omair.majid@gmail.com>
 ;; URL: https://github.com/omajid/xproj-mode
 ;; Keywords: languages tools
-;; Version: 0.1.20180212
+;; Version: 0.1.20190318
 ;; Package-Requires: ((emacs "24"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -28,7 +28,6 @@
 
 ;; Provides a major mode to edit csproj (csproj, vbproj) and other
 ;; msbuild xml files (*.*proj files).
-;;
 
 ;;; Code:
 

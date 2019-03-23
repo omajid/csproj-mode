@@ -3,8 +3,8 @@
 ;;; Copyright (C) 2018 Omair Majid
 
 ;; Author: Omair Majid <omair.majid@gmail.com>
-;; URL: https://github.com/omajid/xproj-mode
-;; Keywords: languages tools
+;; URL: https://github.com/omajid/csproj-mode
+;; Keywords: languages, tools
 ;; Version: 0.1.20190318
 ;; Package-Requires: ((emacs "24"))
 

@@ -46,7 +46,6 @@
   '(let ((snippet-dir (expand-file-name
                        "snippets"
                        (file-name-directory (or load-file-name (buffer-file-name))))))
-     (message snippet-dir)
      (add-to-list 'yas-snippet-dirs snippet-dir t)
      (yas-load-directory snippet-dir)))
 

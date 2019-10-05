@@ -34,6 +34,22 @@
 (defgroup csproj nil ""
   :group 'languages)
 
+(defun csproj-mode--get-dotnet-new-templates ()
+  "Find the template names supported by 'dotnet new'."
+  (mapcar (lambda (line) (nth 1 (split-string line "   *" t)))
+          (nthcdr 2 (split-string
+                     (nth 2 (split-string
+                             (shell-command-to-string "dotnet new --help")
+                             "\n\n" t "[ \n\t]"))
+                     "\n"))))
+
+;;;###autoload
+(defun csproj-mode-dotnet-new (template-name)
+  "Invoke 'dotnet new' with the given TEMPLATE-NAME."
+  (interactive (list (completing-read "Name: " (csproj-mode--get-dotnet-new-templates))))
+  (message "%s" template-name)
+  (start-process "dotnet" "*dotnet-new*" "dotnet" "new" template-name))
+
 ;;;###autoload
 (define-derived-mode csproj-mode xml-mode "csproj"
   "A major mode for editing csproj and other msbuild-style project files"
